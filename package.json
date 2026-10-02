@@ -1,0 +1,42 @@
+{
+    "name": "zvec-mcp-server",
+    "version": "1.0.0",
+    "description": "MCP server for in-process vector search using Zvec/HNSW, replacing Qdrant",
+    "type": "module",
+    "bin": {
+        "zvec-mcp-server": "build/index.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/index.ts",
+        "start": "node build/index.js",
+        "bench": "tsx src/bench.ts"
+    },
+    "keywords": [
+        "mcp",
+        "zvec",
+        "vector-search",
+        "semantic-search",
+        "embeddings",
+        "in-process"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.24.3",
+        "@xenova/transformers": "^2.17.2",
+        "better-sqlite3": "^11.10.0",
+        "dotenv": "^16.4.7",
+        "hnswlib-node": "^3.0.0",
+        "ignore": "^7.0.5",
+        "mcpcat": "^0.1.13",
+        "node-fetch": "^3.3.2",
+        "openai": "^4.77.3",
+        "zod": "^3.24.1"
+    },
+    "devDependencies": {
+        "@types/better-sqlite3": "^7.6.13",
+        "@types/node": "^22.10.5",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2"
+    }
+}
